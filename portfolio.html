@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Yael Sela Photography</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Spectral", serif;
+      background: #f8eded;
+      color: #4b1e45;
+    }
+
+    /* NAVBAR */
+    header {
+      display: flex;
+      align-items: center;
+      padding: 20px 40px;
+      background: #f8eded;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid #e0d5d0;
+    }
+
+    header h1 {
+      font-size: 20px;
+      margin: 0;
+      font-weight: 700;
+      white-space: nowrap;
+      color: #4b1e45;
+    }
+
+    header a {
+      text-decoration: none;
+    }
+
+    nav {
+      margin-left: auto;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #4b1e45;
+      font-size: 18px;
+      transition: opacity 0.3s;
+    }
+
+    nav a:hover {
+      opacity: 0.7;
+    }
+
+    nav a.active {
+      font-weight: 700;
+      border-bottom: 2px solid #4b1e45;
+    }
+
+    /* PAGE TITLE */
+    .portfolio-header {
+      text-align: center;
+      padding: 60px 40px 40px;
+    }
+
+    .portfolio-header h2 {
+      font-size: 48px;
+      font-weight: 700;
+      margin: 0 0 15px 0;
+    }
+
+    .portfolio-header p {
+      font-size: 18px;
+      color: #6b3e5f;
+      margin: 0;
+    }
+
+    /* PORTFOLIO GRID */
+    .portfolio-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-bottom: 60px;
+    }
+
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      aspect-ratio: 1;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-item:hover {
+      transform: scale(1.02);
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .portfolio-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(75, 30, 69, 0.9), transparent);
+      padding: 30px 20px 20px;
+      color: white;
+      transform: translateY(20px);
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    .portfolio-item:hover .portfolio-overlay {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .portfolio-overlay h3 {
+      margin: 0 0 5px 0;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .portfolio-overlay p {
+      margin: 0;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 40px;
+      border-top: 1px solid #e0d5d0;
+      background: #faf5f3;
+      color: #6b3e5f;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #4b1e45;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 20px;
+      }
+
+      nav {
+        gap: 15px;
+      }
+
+      nav a {
+        font-size: 16px;
+      }
+
+      .portfolio-header h2 {
+        font-size: 36px;
+      }
+
+      .portfolio-container {
+        padding: 20px;
+      }
+
+      .portfolio-grid {
+        gap: 15px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <a href="index.html" style="text-decoration:none;">
+      <h1>Yael Sela Photography</h1>
+    </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="portfolio.html" class="active">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <div class="portfolio-header">
+    <h2>Portfolio</h2>
+  </div>
+
+  <!-- PORTFOLIO GRID -->
+  <div class="portfolio-container">
+    <div class="portfolio-grid">
+
+      <!-- Portfolio Item 1 -->
+      <a href="gallery-portraits.html" style="text-decoration: none; color: inherit;">
+        <div class="portfolio-item">
+          <img src="images/portrait1.jpg" alt="Portrait Series">
+          <div class="portfolio-overlay">
+            <h3>Portraits</h3>
+            <p>Experimental and candid portraits</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Portfolio Item 2 -->
+      <a href="gallery-product.html" style="text-decoration: none; color: inherit;">
+        <div class="portfolio-item">
+          <img src="images/product1.jpg" alt="Product Photography">
+          <div class="portfolio-overlay">
+            <h3>Product Photography</h3>
+            <p>Magazine and Website Shots</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Portfolio Item 3 -->
+      <a href="gallery-dance.html" style="text-decoration: none; color: inherit;">
+        <div class="portfolio-item">
+          <img src="images/dance1.jpg" alt="Dance & Movement">
+          <div class="portfolio-overlay">
+            <h3>Dance & Movement</h3>
+            <p>Motion and expression</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Portfolio Item 4 -->
+      <a href="gallery-nature.html" style="text-decoration: none; color: inherit;">
+        <div class="portfolio-item">
+          <img src="images/nature1.jpg" alt="Nature Photography">
+          <div class="portfolio-overlay">
+            <h3>Nature</h3>
+            <p>Landscapes and natural light</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Portfolio Item 5 -->
+      <a href="gallery-graduation.html" style="text-decoration: none; color: inherit;">
+        <div class="portfolio-item">
+          <img src="images/graduation7.jpg" alt="Graduation Shoots">
+          <div class="portfolio-overlay">
+            <h3>Graduation Shoots</h3>
+            <p>Graduation and Celebratory Moments</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Portfolio Item 6 -->
+      <a href="gallery-bw.html" style="text-decoration: none; color: inherit;">
+        <div class="portfolio-item">
+          <img src="images/B&WFilm1.jpg" alt="Black and White Film">
+          <div class="portfolio-overlay">
+            <h3>Black and White Film</h3>
+            <p>Hand Shot and Developed Film</p>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Yael Sela Photography. All rights reserved.</p>
+    <p><a href="contact.html">Get in touch</a> to discuss your project</p>
+  </footer>
+
+</body>
+</html>

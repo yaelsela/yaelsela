@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - Yael Sela Photography</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{--bg:#f8eded;--accent:#4b1e45;--muted:#6b3e5f}
+    body{margin:0;font-family:"Spectral",serif;background:var(--bg);color:var(--accent)}
+
+    header{display:flex;align-items:center;padding:20px 40px;background:var(--bg);position:sticky;top:0;z-index:10;border-bottom:1px solid #e0d5d0}
+    header h1{font-size:20px;margin:0;font-weight:700;white-space:nowrap;color:var(--accent)}
+    header a{text-decoration:none}
+    nav{margin-left:auto;display:flex;gap:30px}
+    nav a{text-decoration:none;color:var(--accent);font-size:18px}
+    nav a:hover{opacity:.7}
+    nav a.active{font-weight:700;border-bottom:2px solid var(--accent)}
+
+    .contact-header{max-width:1100px;margin:60px auto 0;padding:0 20px}
+    .contact-header h2{font-size:40px;margin:0 0 8px}
+
+    .contact-grid{max-width:1100px;margin:30px auto;padding:40px 20px;display:flex;justify-content:center;align-items:center;gap:48px}
+
+    /* Resume image (main column) */
+    .resume-wrap{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 6px 18px rgba(75,30,69,0.06)}
+    .resume-wrap img{width:100%;height:auto;display:block}
+    .resume-note{padding:12px 16px;font-size:14px;color:var(--muted)}
+
+    /* Sidebar with portrait + text box */
+    .sidebar{display:flex;flex-direction:row;gap:18px;align-items:center;justify-content:center}
+    .portrait{flex:0 0 320px;border-radius:8px;overflow:hidden}
+    .portrait img{width:100%;height:auto;display:block}
+
+    .text-box{flex:0 0 680px;max-width:68ch;background:#fff;border-radius:10px;padding:26px;color:var(--accent);box-shadow:0 8px 24px rgba(75,30,69,0.06);font-size:18px;line-height:1.6}
+    .download-btn{display:inline-block;margin-top:12px;padding:8px 12px;background:var(--accent);color:white;text-decoration:none;border-radius:6px}
+    .resume-link{color:var(--accent);font-weight:600;text-decoration:underline;margin-top:10px;display:inline-block}
+
+    footer{max-width:1100px;margin:40px auto 80px;padding:0 20px;color:var(--muted);text-align:center;font-size:14px}
+
+    @media (max-width:900px){
+      .contact-grid{flex-direction:column;padding:20px;gap:20px}
+      .sidebar{order:2;flex-direction:column;align-items:center}
+      .resume-wrap{order:1}
+      .portrait{flex:0 0 60%;max-width:320px;width:100%}
+      .text-box{flex:0 0 100%;max-width:none;padding:20px;font-size:16px}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" style="text-decoration:none;"><h1>Yael Sela Photography</h1></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="contact-header">
+      <h2>Contact & Resume</h2>
+  
+    </div>
+
+    <section class="contact-grid">
+
+      <!-- (resume column removed; resume link moved into contact box) -->
+
+      <!-- Sidebar: portrait + text box -->
+      <aside class="sidebar">
+        <div class="portrait">
+          <!-- Reuses your existing portrait image `me.PNG` if present -->
+          <img src="images/yael.png" alt="Yael Sela portrait">
+        </div>
+
+        <div class="text-box" id="contact-message">
+          <p>Hi, I’m <strong>Yael Sela</strong>—I'm a photographer based in Los Angeles and San Diego, specializing in product shoots, dance, graduation, events, portraits, and more. I love creating visually stunning images that capture meaningful memories, whether it’s a special milestone, a creative project, or just a moment that deserves to be preserved. As a visual arts student at <strong>UC San Diego</strong>, I bring both technical skill and a fresh perspective to every shoot. If you see something on my page that resonates with you, I’d love to help bring your vision to life!</p>
+
+          <h4 style="margin-top:12px;margin-bottom:6px;">Contact</h4>
+          <p style="margin:0 0 10px 0;">
+            <a href="mailto:Yaelssela@gmail.com">Yaelssela@gmail.com</a><br>
+            (818) 746-6776
+          </p>
+
+          <h4 style="margin-top:12px;margin-bottom:6px;">Follow</h4>
+          <p style="margin:0;">
+            Instagram: <a href="https://www.instagram.com/yaelselaphotography" target="_blank" rel="noopener">@yaelselaphotography</a><br>
+            LinkedIn: <a href="https://www.linkedin.com/in/yael-sela-a9615a252" target="_blank" rel="noopener">www.linkedin.com/in/yael-sela-a9615a252</a>
+          </p>
+
+          <p style="margin-top:12px;"><a href="images/Yael%20Sela%20Resume%20Cogs%203.pdf" target="_blank" rel="noopener">Resume (PDF)</a></p>
+        </div>
+      </aside>
+
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Yael Sela Photography
+  </footer>
+
+</body>
+</html>

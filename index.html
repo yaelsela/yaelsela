@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yael Sela Photography</title>
+
+  <!-- Google Font (same style you're using) -->
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Spectral", serif;
+      background: #f8eded;
+      color: #4b1e45;
+    }
+
+    /* NAVBAR */
+    header {
+      display: flex;
+      align-items: center;
+      padding: 20px 40px;
+      background: #f8eded;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 20px;      /* smaller like you wanted */
+      margin: 0;
+      font-weight: 700;
+      white-space: nowrap;
+      color:#4b1e45;
+    }
+
+    nav {
+      margin-left: auto;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #4b1e45;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      opacity: 0.7;
+    }
+
+    /* MOVING MARQUEE */
+    .marquee-container {
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 20px 0;
+    }
+
+    .marquee-text {
+      display: inline-block;
+      font-size: 80px;
+      font-weight: 700;
+      animation: scrollLeft 10s linear infinite;
+    }
+
+    @keyframes scrollLeft {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* MAIN CONTENT */
+    .home-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 80px 40px;
+      gap: 70px;
+    }
+
+    .text-box {
+      max-width: 380px;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .text-box h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .portrait-img {
+      width: 380px;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <a href="index.html" style="text-decoration:none;">
+      <h1>Yael Sela Photography</h1>
+    </a>
+
+    <nav>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- MOVING LARGE TITLE -->
+  <div class="marquee-container">
+    <div class="marquee-text">
+      YAEL SELA PHOTOGRAPHY • YAEL SELA PHOTOGRAPHY • YAEL SELA PHOTOGRAPHY •
+    </div>
+  </div>
+
+  <!-- HOME CONTENT -->
+  <div class="home-content">
+
+    <!-- TEXT -->
+    <div class="text-box">
+      <h2>Welcome to Yael Sela Photography!</h2>
+      <p>
+        Based in Los Angeles and San Diego, I specialize in capturing moments that matter—
+        experimental portraits, street photography, dance, nature, and more! With a passion
+        for storytelling through visuals, I aim to create timeless images that resonate with you.
+      </p>
+    </div>
+
+    <!-- PHOTO OF YOU -->
+    <img src="images/me.PNG" class="portrait-img" alt="Photo of Yael">
+
+  </div>
+
+</body>
+</html>
